@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class='weather-wrapper'>
+  <view class='temperature' >
+  {{temperature}}°
+  </view>
+  <view class='description'>
+  {{weather}}
+  </view>
+  <image class='weather-bg' src='{{imagePath}}' mode='scaleToFill'></image>
+</view>
+
+<view class='forecasts-desc-wrapper'>
+  <image class='forecasts-desc-image' src='/imgs/time-icon.png' mode='scaleToFill' />
+  <view class='forecasts-desc-text'>未来三天气预测</view>
+</view>
+
+<scroll-view scroll-x>
+  <view class='forecasts-list'>
+    <view class='forecasts-item' wx:for='{{forecasts}}' wx:key='date'>
+      <view class='forecasts-item-week'>
+        {{item.week}}
+      </view>
+      <view class='forecasts-item-date'>
+        {{item.date}}
+      </view>
+      <image class='forecasts-item-image' src='{{iconPath}}' mode='scaleToFill'/>
+      <view class='forecasts-item-day-temperature'>
+        {{item.dayTemp}}
+      </view>
+      <view class='forecasts-item-night-temperature'>
+        {{item.nightTemp}}
+      </view>
+    </view>
+  </view>
+</scroll-view>

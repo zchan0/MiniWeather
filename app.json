@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#cbeefd",
+    "navigationBarTitleText": "Weather Butler",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  }
+}

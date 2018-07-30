@@ -1,0 +1,95 @@
+/**index.wxss**/
+.weather-wrapper {
+  position: relative;
+  padding-top: 212rpx;
+  padding-bottom: 212rpx;
+}
+.temperature {
+  text-align: center;
+  font-size: 200rpx;
+  /* 通常我们都会给文字视图设置字号和行高两个属性，行高设置为字号的1.4倍，保证文字视图的上下都有一定的空隙。 */
+  line-height: 280rpx;
+  opacity: 0.8;
+}
+
+.description {
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 56rpx;
+}
+
+.weather-bg {
+  /* 需要同时将父视图的 position 设置为 relative  */
+  /* 参考：https://css-tricks.com/absolute-positioning-inside-relative-positioning/  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 放置于所有兄弟节点的最后  */
+  z-index: -1;
+}
+
+.forecasts-desc-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+.forecasts-desc-image {
+  width: 36rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.forecasts-desc-text {
+  font-size: 30rpx;
+  ling-height: 42rpx;
+  text-align: center;
+}
+
+.forecasts-list {
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.forecasts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 20rpx;
+  width: 150rpx;
+  margin-left: 30rpx;
+}
+
+.forecasts-item-week {
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.forecasts-item-date {
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: grey;
+}
+
+.forecasts-item-image {
+  margin-top: 15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.forecasts-item-day-temperature {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.forecasts-item-night-temperature {
+  margin-top: 5rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
